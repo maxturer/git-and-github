@@ -90,7 +90,7 @@
                                 </p>
                                 <p>
                                     This should install git. Once the process is completed, try typing <span class="code p-1">git</span> in the terminal and pressing <span class="code p-1">enter</span>. <br>
-                                    If git has been installed correctly, you should see output with <span class="code">usage</span> and other tips about using git. 
+                                    If git has been installed correctly, you should see output with <span class="code p-1">usage</span> and other tips about using git. 
                                 </p>
                             </div>
 
@@ -115,6 +115,14 @@
 
                     <div class="col p-3 text-end fade-in fade-2 border-black border-top">
                         <h1 class="fw-lighter">Configuring Git</h1>
+                        <p>
+                            Run these lines one at a time, substituting your name in the first line and your email (the email you registered for GitHub with) in the second line:
+                        </p>
+                        <p><span class="code p-1">git config --global user.name "George Washington"</span></p>
+                        <p><span class="code p-1">git config --global user.email george.squashington@email.gwu.edu</span></p>
+                        <p><span class="code p-1">git config --global init.defaultBranch main</span></p>
+                        <p><span class="code p-1">git config --global core.editor "code --wait"</span></p>
+                        <p><span class="code p-1">git config --global pull.rebase false</span></p>
                     </div>
 
                 </div>
