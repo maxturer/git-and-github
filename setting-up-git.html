@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="vh-100">
+    <div class="container-fluid h-100">
+        <div class="row minh-100">
+            <div class="bg-black h-25 minh-md-100 col-md-5 col-xxl-3">
+                <div class="row w-md-100 h-md-100 align-items-center justify-content-start text-start">
+                    <div class="col">
+                        <div class="row">
+                            <div class="container">
+                                <nav class="navbar navbar-expand-md bg-black flex-row flex-md-column align-items-center align-items-md-start" data-bs-theme="dark">
+                                    <a class="navbar-brand w-md-100" href="index.html"><h1 class="fw-lighter fs-4 display-md-4 w-100 text-wrap">Introduction to Git and Github</h1></a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                      </button>
+                                      <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav nav-underline flex-md-column text-uppercase">
+                                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="what-is-git.html">What is Git?</a></li>
+                                            <li class="nav-item"><a class="nav-link active" href="setting-up-git.html">Setting up Git</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="guide.html">Basics of using Git</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Links for further reading</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row h-md-100 py-4 flex-column align-items-center justify-content-center">
+
+                    <div class="col p-3 fade-in">
+                        <h1 class="fw-lighter">Setting up Git</h1>
+                        <ul class="nav nav-tabs align-items-center" id="OSTab" role="tablist">
+                            <li class="nav-item fw-light p-1" role="presentation">
+                                <span class="active" id="choose-tab" data-bs-toggle="tab" data-bs-target="#choose-tab-pane" role="tab" aria-controls="choose-tab-pane" aria-selected="true">Choose your OS:</span>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="mac-tab" data-bs-toggle="tab" data-bs-target="#mac-tab-pane" type="button" role="tab" aria-controls="mac-tab-pane" aria-selected="false">On a MAC</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="windows-tab" data-bs-toggle="tab" data-bs-target="#windows-tab-pane" type="button" role="tab" aria-controls="windows-tab-pane" aria-selected="false">On WINDOWS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux-tab-pane" type="button" role="tab" aria-controls="linux-tab-pane" aria-selected="false">On LINUX</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="OSTabContent">
+
+                            <div class="tab-pane fade show active p-2" id="choose-tab-pane" role="tabpanel" aria-labelledby="choose-tab" tabindex="0">
+                                <p class="display-3 fw-lighter">
+                                    What operating system is your computer running?
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade show p-2" id="mac-tab-pane" role="tabpanel" aria-labelledby="mac-tab" tabindex="0">
+                                <h2 class="fw-lighter">On a MAC</h2>
+                                <p>
+                                    Open your <b class="text-uppercase">Terminal</b>. You can do this with <span class="code p-1">command + spacebar</span>, then start typing "terminal" and hit enter when it has auto-completed. 
+                                </p>
+                                <p>
+                                    If you do not have <b class="text-uppercase">Homebrew</b> installed (or don't know what <b class="text-uppercase">Homebrew</b> is), run: <br>
+                                    <span class="code p-1">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>
+                                </p>
+                                <p>
+                                    This will prompt you for the password you use to log in to your computer. Enter your password and press <span class="code p-1">enter</span> on your keyboard to begin the installation. 
+                                </p>
+                                <p>
+                                    Once <b class="text-uppercase">Homebrew</b> has finished installing, there will be two commands under "Next steps" in the output, they will look something like: <br>
+                                    <span class="code p-1">
+                                        (echo; echo ‘eval “$(/opt/homebrew/bin/brew shellenv)”’) >> /Users/your-user-name/.zprofile &nbsp;<br>
+                                        &nbsp; eval “$(/opt/homebrew/bin/brew shellenv)” 
+                                    </span>
+                                </p>
+                                <p>
+                                    Copy and paste the lines from the output into your terminal and press enter. <br>
+                                    Now quit your terminal and re-open it for changes to take effect. 
+                                </p>
+                                <p>
+                                    Once you have re-opened your terminal with Homebrew installed, run: <span class="code p-1">brew install git</span>
+                                </p>
+                                <p>
+                                    This should install git. Once the process is completed, try typing <span class="code p-1">git</span> in the terminal and pressing <span class="code p-1">enter</span>. <br>
+                                    If git has been installed correctly, you should see output with <span class="code p-1">usage</span> and other tips about using git. 
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade p-2" id="windows-tab-pane" role="tabpanel" aria-labelledby="windows-tab" tabindex="0">
+                                <h2 class="fw-lighter">On WINDOWS</h2>
+                                <p>
+                                    Install <a href="https://gitforwindows.org/" target="_blank" rel="noopener noreferrer">Git for Windows</a>.
+                                </p>
+                                <p>
+                                    Once installation has completed, open the program.
+                                </p>
+                                <p>
+                                    Type <span class="code p-1">git</span> and push <span class="code p-1">enter</span> - you should see output with <span class="code p-1">usage</span> and other tips about using git. 
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade p-2" id="linux-tab-pane" role="tabpanel" aria-labelledby="linux-tab" tabindex="0">
+                                <h2 class="fw-lighter">On LINUX</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col p-3 text-end fade-in fade-2 border-black border-top">
+                        <h1 class="fw-lighter">Configuring Git</h1>
+                        <p>
+                            Run these lines one at a time, substituting your name in the first line and your email (the email you registered for GitHub with) in the second line:
+                        </p>
+                        <p><span class="code p-1">git config --global user.name "George Washington"</span></p>
+                        <p><span class="code p-1">git config --global user.email george.squashington@email.gwu.edu</span></p>
+                        <p><span class="code p-1">git config --global init.defaultBranch main</span></p>
+                        <p><span class="code p-1">git config --global core.editor "code --wait"</span></p>
+                        <p><span class="code p-1">git config --global pull.rebase false</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
