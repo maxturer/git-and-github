@@ -50,6 +50,10 @@
     .col-right {
         margin-top: 3rem;
     }
+
+    .h-100-nav {
+        height: calc(100% - 3.5rem);
+    }
 }
 
 /* fancy fade-in animation for fun */
