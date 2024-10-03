@@ -1,0 +1,156 @@
+/* making our site responsive */
+.minh-100 {
+    min-height: 100% !important;
+}
+
+.flex-pls {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .h-md-100 {
+        height: 100% !important;
+    }
+
+    .mh-md-100vh {
+        height: 100vh !important;
+    }
+
+    .minh-md-100 {
+        height: auto !important;
+        min-height: 100% !important;
+    }
+
+    .w-md-100 {
+        width: 100% !important;
+    }
+
+    .display-md-4 {
+        font-size: 3.5rem !important;
+    }
+
+    .col-right {
+        margin-left: 41.66666667%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .col-right {
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .p-sm-tall{
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .col-right {
+        margin-top: 3rem;
+    }
+}
+
+/* fancy fade-in animation for fun */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fade-2 {
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+.fade-3 {
+    opacity: 0;
+    animation-delay: 4s;
+}
+
+/* spacing */
+.car-img {
+    width: calc(100% - 6rem);
+    height: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* colors */
+.red {
+    color: #ec635e;
+}
+
+.yellow {
+    color: #fadf70;
+}
+
+.green {
+    color: #94d769;
+}
+
+.blue {
+    color: #60b4f9;
+}
+
+.code {
+    color: #fff;
+    background-color: #000;
+}
+
+/* nav styles (they're ugly) */
+.nav-tabs {
+    border-color: #000;
+}
+
+.nav-tabs .nav-link {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+}
+
+.nav-tabs .nav-link.active {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.nav-tabs .nav-link#mac-tab:not(.active):hover {
+    border-top: 1px solid #ec635e;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #ec635e;
+    border-right: 1px solid #ec635e;
+    background-color: #ec635e;
+    color: #000;
+}
+
+.nav-tabs .nav-link#windows-tab:not(.active):hover {
+    border-top: 1px solid #fadf70;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #fadf70;
+    border-right: 1px solid #fadf70;
+    background-color: #fadf70;
+    color: #000;
+}
+
+.nav-tabs .nav-link#linux-tab:not(.active):hover {
+    border-top: 1px solid #94d769;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #94d769;
+    border-right: 1px solid #94d769;
+    background-color: #94d769;
+    color: #000;
+}
