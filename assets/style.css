@@ -3,9 +3,17 @@
     min-height: 100% !important;
 }
 
+.flex-pls {
+    display: flex;
+}
+
 @media screen and (min-width: 768px) {
     .h-md-100 {
         height: 100% !important;
+    }
+
+    .mh-md-100vh {
+        height: 100vh !important;
     }
 
     .minh-md-100 {
@@ -20,11 +28,27 @@
     .display-md-4 {
         font-size: 3.5rem !important;
     }
+
+    .col-right {
+        margin-left: 41.66666667%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .col-right {
+        margin-left: 25%;
+    }
 }
 
 @media screen and (max-width: 991px) {
     .p-sm-tall{
         padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .col-right {
+        margin-top: 3rem;
     }
 }
 
