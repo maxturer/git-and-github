@@ -10,8 +10,8 @@
 <body class="vh-100">
     <div class="container-fluid h-100">
         <div class="row minh-100">
-            <div class="bg-black h-25 minh-md-100 col-md-5 col-xxl-3">
-                <div class="row w-md-100 h-md-100 align-items-center justify-content-start text-start">
+            <div class="bg-black minh-md-100 col-md-5 col-xxl-3 position-fixed z-2">
+                <div class="row w-md-100 mh-md-100vh align-items-center justify-content-start text-start">
                     <div class="col">
                         <div class="row">
                             <div class="container">
@@ -25,7 +25,7 @@
                                             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
                                             <li class="nav-item"><a class="nav-link" href="what-is-git.html">What is Git?</a></li>
                                             <li class="nav-item"><a class="nav-link active" href="setting-up-git.html">Setting up Git</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="guide.html">Basics of using Git</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="guide.html">Git basics</a></li>
                                             <li class="nav-item"><a class="nav-link" href="#">Links for further reading</a></li>
                                         </ul>
                                     </div>
@@ -35,15 +35,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="row h-md-100 py-4 flex-column align-items-center justify-content-center">
+            <div class="col col-right">
+                <div class="row h-md-100 flex-column align-items-center justify-content-center">
 
-                    <div class="col p-3 fade-in">
+                    <div class="col p-3 fade-in fw-light">
                         <h1 class="fw-lighter">Setting up Git</h1>
-                        <ul class="nav nav-tabs align-items-center" id="OSTab" role="tablist">
+                        <ul class="nav nav-tabs align-items-center flex-column flex-md-row" id="OSTab" role="tablist">
+                            <div>
                             <li class="nav-item fw-light p-1" role="presentation">
                                 <span class="active" id="choose-tab" data-bs-toggle="tab" data-bs-target="#choose-tab-pane" role="tab" aria-controls="choose-tab-pane" aria-selected="true">Choose your OS:</span>
                             </li>
+                            </div>
+                            <div class="flex-pls flex-row">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="mac-tab" data-bs-toggle="tab" data-bs-target="#mac-tab-pane" type="button" role="tab" aria-controls="mac-tab-pane" aria-selected="false">On a MAC</button>
                             </li>
@@ -53,6 +56,7 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux-tab-pane" type="button" role="tab" aria-controls="linux-tab-pane" aria-selected="false">On LINUX</button>
                             </li>
+                            </div>
                         </ul>
                         <div class="tab-content" id="OSTabContent">
 
@@ -109,11 +113,20 @@
 
                             <div class="tab-pane fade p-2" id="linux-tab-pane" role="tabpanel" aria-labelledby="linux-tab" tabindex="0">
                                 <h2 class="fw-lighter">On LINUX</h2>
+                                <p>
+                                    Open your <span class="text-uppercase">terminal</span>. You can use <span class="code p-1">Ctrl + Alt + T</span>, or find it in your applications menu.
+                                </p>
+                                <p>
+                                    On a Debian-based distribution (such as <span class="text-uppercase">Ubuntu</span>), try <span class="code p-1">apt</span>. Enter the following into your terminal: <span class="code p-1">sudo apt install git-all</span>
+                                </p>
+                                <p>
+                                    On a different distribution (such as <span class="text-uppercase">Fedora</span> or <span class="text-uppercase">Arch</span>) that does not use <span class="code p-1">apt</span>, you can find similar commands in <a href="https://git-scm.com/downloads/linux" target="_blank" rel="noopener noreferrer">the Git documentation</a>.
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col p-3 text-end fade-in fade-2 border-black border-top">
+                    <div class="col p-3 text-end fade-in fade-2 border-black border-top fw-light">
                         <h1 class="fw-lighter">Configuring Git</h1>
                         <p>
                             Run these lines one at a time, substituting your name in the first line and your email (the email you registered for GitHub with) in the second line:
@@ -125,6 +138,49 @@
                         <p><span class="code p-1">git config --global pull.rebase false</span></p>
                     </div>
 
+                    <div class="col p-3 text-start fade-in fade-3 border-black border-top">
+                        <h1 class="fw-lighter">Connecting Git to GitHub</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col p-3 fw-light">
+                                    <h2>Setting up SSH</h2>
+                                    <p>
+                                        In your terminal or git-bash, run this command with the email associated with your GitHub account: <br>
+                                        <span class="code p-1">ssh-keygen -t rsa -C “george.squashington@email.gwu.edu”</span>
+                                    </p>
+                                    <p>
+                                        When it asks you to “Enter a file in which to save the key”, press <span class="code p-1">enter</span> to save it to the default location.
+                                    </p>
+                                    <p>
+                                        When it asks you to enter a password, press <span class="code p-1">enter</span> to skip using a password. 
+                                    </p>
+                                    <p>In your terminal, run: <span class="code p-1">ssh-add ~/.ssh/id_rsa</span></p>
+                                    <p>
+                                        In your terminal, run the following command to add your key to the clipboard: <span class="code p-1">pbcopy < ~/.ssh/id_rsa.pub</span>
+                                    </p>
+                                    <p>
+                                        <i>While logged into your GitHub account</i>, go to: <br>
+                                        <span class="code p-1">https://github.com/settings/keys</span> <br>
+                                        Click on the green “New SSH key” button. <br>
+                                        Leave the title blank, and then paste your key into the “key” section. <br>
+                                        Click the green “Add SSH key” button. 
+                                    </p>
+                                </div>
+                                <div class="col p-3 fw-light">
+                                    <h2>Testing SSH Connection</h2>
+                                    <p>
+                                        In your terminal, run: <span class="code p-1">ssh -T git@github.com</span>
+                                    </p>
+                                    <p>
+                                        If the output says <span class="code p-1">“The authenticity of host 'github.com' .... can't be established ... Are you sure you want to continue connecting (yes/no)?”</span> Type <span class="code p-1">yes</span> and hit <span class="code p-1">enter</span>.
+                                    </p>
+                                    <p>
+                                        You should see <span class="code p-1">Hi <your_username>! You've successfully authenticated, but GitHub does not provide shell access</span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
