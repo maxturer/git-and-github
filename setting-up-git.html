@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Setting up git || Git & Github</title>
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
 </head>
@@ -20,13 +20,19 @@
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                       </button>
-                                      <div class="collapse navbar-collapse" id="navbarNav">
+                                      <div class="collapse navbar-collapse flex-column align-items-start" id="navbarNav">
+                                        <span class="text-white mb-3 fw-lighter">By <a class="text-secondary" href="https://github.com/alepbloyd" target="_blank" rel="noopener noreferrer">Alex Boyd</a> and <a class="text-secondary" href="https://github.com/maxturer" target="_blank" rel="noopener noreferrer">Max Turer</a></span>
                                         <ul class="navbar-nav nav-underline flex-md-column text-uppercase">
                                             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
                                             <li class="nav-item"><a class="nav-link" href="what-is-git.html">What is Git?</a></li>
                                             <li class="nav-item"><a class="nav-link active" href="setting-up-git.html">Setting up Git</a></li>
                                             <li class="nav-item"><a class="nav-link" href="guide.html">Git basics</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Links for further reading</a></li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="push-guide.html"
+                                                  >Pushing to GitHub</a
+                                                >
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="links.html">Links for further reading</a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -42,20 +48,20 @@
                         <h1 class="fw-lighter">Setting up Git</h1>
                         <ul class="nav nav-tabs align-items-center flex-column flex-md-row" id="OSTab" role="tablist">
                             <div>
-                            <li class="nav-item fw-light p-1" role="presentation">
-                                <span class="active" id="choose-tab" data-bs-toggle="tab" data-bs-target="#choose-tab-pane" role="tab" aria-controls="choose-tab-pane" aria-selected="true">Choose your OS:</span>
-                            </li>
+                                <li class="nav-item fw-light p-1" role="presentation">
+                                    <span class="active" id="choose-tab" data-bs-toggle="tab" data-bs-target="#choose-tab-pane" role="tab" aria-controls="choose-tab-pane" aria-selected="true">Choose your OS:</span>
+                                </li>
                             </div>
                             <div class="flex-pls flex-row">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="mac-tab" data-bs-toggle="tab" data-bs-target="#mac-tab-pane" type="button" role="tab" aria-controls="mac-tab-pane" aria-selected="false">On a MAC</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="windows-tab" data-bs-toggle="tab" data-bs-target="#windows-tab-pane" type="button" role="tab" aria-controls="windows-tab-pane" aria-selected="false">On WINDOWS</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux-tab-pane" type="button" role="tab" aria-controls="linux-tab-pane" aria-selected="false">On LINUX</button>
-                            </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mac-tab" data-bs-toggle="tab" data-bs-target="#mac-tab-pane" type="button" role="tab" aria-controls="mac-tab-pane" aria-selected="false">On a MAC</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="windows-tab" data-bs-toggle="tab" data-bs-target="#windows-tab-pane" type="button" role="tab" aria-controls="windows-tab-pane" aria-selected="false">On WINDOWS</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux-tab-pane" type="button" role="tab" aria-controls="linux-tab-pane" aria-selected="false">On LINUX</button>
+                                </li>
                             </div>
                         </ul>
                         <div class="tab-content" id="OSTabContent">

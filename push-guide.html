@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushing to GitHub || Git & Github</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="vh-100">
+    <div class="container-fluid h-100">
+        <div class="row minh-100">
+            <div class="bg-black minh-md-100 col-md-5 col-xxl-3 position-fixed z-2">
+                <div class="row w-md-100 mh-md-100vh align-items-center justify-content-start text-start">
+                    <div class="col">
+                        <div class="row">
+                            <div class="container">
+                                <nav class="navbar navbar-expand-md bg-black flex-row flex-md-column align-items-center align-items-md-start" data-bs-theme="dark">
+                                    <a class="navbar-brand w-md-100" href="index.html"><h1 class="fw-lighter fs-4 display-md-4 w-100 text-wrap">Introduction to Git and Github</h1></a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                      </button>
+                                      <div class="collapse navbar-collapse flex-column align-items-start" id="navbarNav">
+                                        <span class="text-white mb-3 fw-lighter">By <a class="text-secondary" href="https://github.com/alepbloyd" target="_blank" rel="noopener noreferrer">Alex Boyd</a> and <a class="text-secondary" href="https://github.com/maxturer" target="_blank" rel="noopener noreferrer">Max Turer</a></span>
+                                        <ul class="navbar-nav nav-underline flex-md-column text-uppercase">
+                                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="what-is-git.html">What is Git?</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="setting-up-git.html">Setting up Git</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="guide.html">Git basics</a></li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="push-guide.html"
+                                                  >Pushing to GitHub</a
+                                                >
+                                                <ul class="mt-4">
+                                                  <li><a class="text-white" href="push-guide.html#creating-a-github-repository">Creating a GitHub repository</a></li>
+                                                  <li><a class="text-white" href="push-guide.html#connecting-your-repositories">Connecting your repositories</a></li>
+                                                  <li><a class="text-white" href="push-guide.html#forking-a-github-repository">Forking a GitHub repository</a></li>
+                                                  <li><a class="text-white" href="push-guide.html#cloning-a-github-repository">Cloning a GitHub repository</a></li>
+                                                  <li><a class="text-white" href="push-guide.html#working-on-your-cloned-repository">Working on your Cloned Repository</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="links.html">Links for further reading</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-right">
+                <div class="row h-md-100 flex-column align-items-center justify-content-center text-center">
+
+                  <div class="col p-3 fade-in fw-light text-start border-bottom border-black">
+                      <h1 class="display-3">Pushing to GitHub</h1>
+                      <div class="flex-pls flex-column flex-lg-row align-items-start">  
+                        <div class="col p-2">
+                          <h2 class="fw-lighter" id="creating-a-github-repository">Creating a GitHub Repository</h2>
+                          <p>
+                            Head to GitHub, and look at a list of your repositories (if you have a new account, it's likely blank)
+                          </p>
+                          <p>
+                            Click on the <span class="green">green</span> button that says <span class="green-bg p-1 text-white">New</span> on the top right.
+                          </p>
+                          <p>
+                            You’ll be brought to the “New Repository page” to name and create your remote repository. I already called mine “my-new-git-repo” on my local computer, so I'll do the same here:<br>
+                            <img class="mw-100" src="assets/images/new-repo.png" />
+                          </p>
+                          <p>
+                            Once you submit and create, you have a GitHub repo! There are a lot of instructions here, but let’s focus on just a few.
+                          </p>
+                          <p>
+                            To connect our repository ( <span class="code p-1">/Users/[yourname]/my-new-git-repo</span> ) with this new GitHub repository ( <span class="code p-1">https://github.com/[your-username]/my-new-git-repo</span> ), we can add the GitHub repository to ours as a <b class="fw-bold">remote</b>. 
+                          </p>
+                        </div>
+                        <div class="col p-2">
+                          <h2 class="fw-lighter" id="connecting-your-repositories">Connecting your repositories</h2>
+                          <p>
+                            In your terminal in your git repository directory, add the GitHub version as a <b>remote</b> called <b>origin</b>: <br>
+                            <span class="code p-1">git remote add origin https://github.com/[yourusername]/my-new-git-repo.git</span>
+                          </p>
+                          <p>
+                            Let’s try to add, or <b class="fw-bold">push</b>, our changes to GitHub with <span class="code p-1">git push</span>.
+                          </p>
+                          <p>
+                            <span class="fs-4 fw-lighter">Did it work?</span> No, Git didn't like that. You should see an error that says: <br>
+                            <i>"fatal: The current branch main has no upstream branch."</i>
+                          </p>
+                          <p>
+                            Intimidating, but fine. You can connect the changes you've made with GitHub by telling git that what you're working on right now on your computer is the same as a GitHub branch. It doesn't know yet. <br>
+                            Here's a command to tell it to connect your work to the <b class="fw-bold">remote</b> called <b class="fw-bold">origin</b> on a branch called <b class="fw-bold">main</b>: <br>
+                            <span class="code p-1">git push -u origin main</span>
+                          </p>
+                          <p>
+                            Now, head back to your GitHub repository ( <span class="code p-1">https://github.com/[your-username]/my-new-git-repo</span> ) and refresh the page. Your <b class="fw-bold">hello.txt</b> file is now on GitHub!
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col p-3 fade-in fade-2 fw-light text-end border-bottom border-black">
+                    <h2 class="fw-lighter" id="forking-a-github-repository">
+                      Forking a GitHub repository
+                    </h2>
+                    <div class="flex-pls justify-content-end flex-column flex-lg-row">
+                      <div>
+                        <img src="assets/images/create-fork.png" />
+                      </div>
+                      <div>
+                        <p>
+                          <b class="fw-bold">Forking</b> an existing GitHub repository means making a copy and keeping it for yourself. It’s a bit like saving a zip file to your Downloads folder, but in Git language. Practice forking this one: <br>
+                          <a href="https://github.com/maxturer/git-and-github" target="_blank" rel="noopener noreferrer"><span class="code p-1">https://github.com/maxturer/git-and-github</span></a>
+                        </p>
+                        <p>
+                          Once you’re there,  click on the <b class="fw-bold blue">Fork</b> button on the top right, then <b class="fw-bold red">Create a new fork</b>. <br>
+                        </p>
+                        <p>
+                          Name it what you want, and keep “copy the <b class="fw-bold">main</b> branch only” checked.
+                        </p>
+                        <p>
+                          GitHub will bring you to your new <b class="fw-bold">fork</b>, or a version of this repository that you own now.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col p-3 fade-in fade-3 fw-light text-start border-bottom border-black">
+                    <h2 class="fw-lighter" id="cloning-a-github-repository">Cloning a GitHub Repository</h2>
+                    <div class="flex-pls justify-content-space-between flex-column flex-lg-row">
+                      <div>
+                        <p>
+                          To edit your new forked repository on your computer, find the <span class="green-bg text-white p-1"><> Code</span> button on the top right. Copy the URL you see (HTTPS should be underlined)
+                        </p>
+                        <p>
+                          Return to your terminal, and open a new window.
+                        </p>
+                        <p>
+                          <b class="fw-bold">Clone</b> your new fork using <span class="code p-1">git clone</span>: <br>
+                          <span class="code p-1">git clone https://github.com/[your-username]/git-and-github</span>
+                        </p>
+                        <p>
+                          That should make a new repository/folder on your computer called <b class="fw-bold">git-and-github</b> (or whatever you named your fork). To enter the repository, then open it in <b class="fw-bold">Visual Studio Code</b>, enter the following two commands: <br>
+                          <span class="code p-1">cd git-and-github</span>
+                          <span class="code p-1">code .</span>
+                        </p>
+                        <p>
+                          The repository you copied is a <b class="fw-bold">GitHub Pages</b> site (this one!), GitHub's useful tool for publishing your repository on the internet. You can <a href="https://maxturer.github.io/git-and-github" target="_blank" rel="noopener noreferrer">access it in your browser here</a>. <br>
+                        </p>
+                      </div>
+                      <div class="mw-100">
+                        <img class="w-100" src="assets/images/clone.png" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col p-3 fade-in fade-4 fw-light text-end">
+                    <h2 class="fw-lighter" id="working-on-your-cloned-repository">Working on your cloned repository</h2>
+                    <p>
+                      On <a href="https://maxturer.github.io/git-and-github" target="_blank" rel="noopener noreferrer">the example site</a>, you should see a big heading that says: <span class="display-5">Hi, Who are you?!</span>. <br>
+                      Using Git, let's change that in your <b class="fw-bold">fork</b> to say your name.
+                    </p>
+                    <p>
+                      In <b class="fw-bold">Visual Studio Code</b>, look for a text file called <span class="code p-1">YOUR_NAME_HERE.txt</span>. <br>
+                      Click to open it, and replace the line that says <span class="code p-1">Who are you?</span> with your own name. Save with <span class="code p-1">Cmd + S</span> (or <span class="code p-1">Ctrl + S</span> on Windows), and try adding your change to GitHub with <span class="code p-1">git add YOUR_NAME_HERE.txt</span>, committing with <span class="code p-1">git commit -m "[message]"</span>, and pushing to your fork with <span class="code p-1">git push</span>.
+                    </p>
+                    <p class="fs-4">
+                      Your change is now active on your forked GitHub repository!
+                    </p>
+                    <p>
+                      If you'd like to see this on the web, you can launch your GitHub repository as a <b class="fw-bold">GitHub Pages site</b> of your own. This is a really useful way to easily launch your own website once you know how to use <b class="fw-bold">Git</b>.
+                    </p>
+                    <p>
+                      To do this, go to your forked repository’s settings. <br>
+                      <img class="mw-100" src="assets/images/settings.png" /> <br>
+                      From there, select <img src="assets/images/pages.png" /> on the left sidebar. Name your site, select the <img src="assets/images/deploy-from-branch.png" /> option to update the site every time you <b class="fw-bold">push</b> to GitHub, and save. Wait a few minutes for GitHub to work on it.
+                    </p>
+                    <p>
+                      <span class="display-6">You did it!</span>
+                    </p>
+                    <p>
+                      Check out your GitHub pages site with your new committed & pushed edit: <span class="code p-1">https://[your-username].github.io/git-and-github</span>
+                    </p>
+                  </div>
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
