@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git & Github</title>
+    <title>Links for further reading || Git & Github</title>
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@
                                       <div class="collapse navbar-collapse flex-column align-items-start" id="navbarNav">
                                         <span class="text-white mb-3 fw-lighter">By <a class="text-secondary" href="https://github.com/alepbloyd" target="_blank" rel="noopener noreferrer">Alex Boyd</a> and <a class="text-secondary" href="https://github.com/maxturer" target="_blank" rel="noopener noreferrer">Max Turer</a></span>
                                         <ul class="navbar-nav nav-underline flex-md-column text-uppercase">
-                                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
                                             <li class="nav-item"><a class="nav-link" href="what-is-git.html">What is Git?</a></li>
                                             <li class="nav-item"><a class="nav-link" href="setting-up-git.html">Setting up Git</a></li>
                                             <li class="nav-item"><a class="nav-link" href="guide.html">Git basics</a></li>
@@ -32,7 +32,7 @@
                                                   >Pushing to GitHub</a
                                                 >
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="links.html">Links for further reading</a></li>
+                                            <li class="nav-item"><a class="nav-link active" href="links.html">Links for further reading</a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -42,9 +42,21 @@
                 </div>
             </div>
             <div class="col col-right">
-                <div class="row h-100-nav h-md-100 align-items-center justify-content-center text-center">
-                    <div class="col py-4">
-                        <h1 class="display-1 fade-in">Hi, <span id="your-name"></span>!</h1>
+                <div class="row h-100-nav h-md-100 align-items-center justify-content-center text-start">
+                    <div class="col py-4 fw-light fade-in">
+                        <h1 class="display-1">Links for further reading</h1>
+                        <h2 class="fw-light fs-1">Git references</h2>
+                        <ul class="list-unstyled pb-4">
+                            <li><a class="fw-lighter fs-1" href="https://git-scm.com/docs" target="_blank" rel="noopener noreferrer">List of Git commands</a></li>
+                            <li><a class="fw-lighter fs-1" href="https://docs.github.com/en/get-started/start-your-journey/hello-world" target="_blank" rel="noopener noreferrer">GitHub's introduction to Git</a></li>
+                            <li><a class="fw-lighter fs-1" href="https://curriculum.turing.edu/module1/lessons/git_cheatsheet" target="_blank" rel="noopener noreferrer">Git cheatsheet</a></li>    
+                        </ul>
+                        <h2 class="fw-light fs-1">Next level Git</h2>
+                        <ul class="list-unstyled">
+                            <li><a class="fw-lighter fs-1" href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell" target="_blank" rel="noopener noreferrer">Git Branches</a></li>
+                            <li><a class="fw-lighter fs-1" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging" target="_blank" rel="noopener noreferrer">Git Tags</a></li>
+                            <li><a class="fw-lighter fs-1" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank" rel="noopener noreferrer">GitHub pull requests & merge conflicts</a></li>    
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -53,8 +65,5 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        jQuery.get('YOUR_NAME_HERE.txt', function(data) { document.getElementById("your-name").innerHTML = data; });
-    </script>
 </body>
 </html>
