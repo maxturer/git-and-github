@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'alagard';
   src:
-    url("/assets/fonts/alagard.ttf") format("ttf"),
-    url("/assets/fonts/alagard.woff") format("woff");
+    url("../git-and-github/assets/fonts/alagard.ttf") format("ttf"),
+    url("../git-and-github/assets/fonts/alagard.woff") format("woff");
   font-weight: 200;
 }
 
