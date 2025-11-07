@@ -1,3 +1,12 @@
+/* font */
+@font-face {
+  font-family: 'alagard';
+  src:
+    url("/assets/fonts/alagard.ttf") format("ttf"),
+    url("/assets/fonts/alagard.woff") format("woff");
+  font-weight: 200;
+}
+
 /* making our site responsive */
 
 .minh-100 {
@@ -14,6 +23,24 @@
 
 .minw-100 {
     min-width: 100%;
+}
+
+h1,
+.navLeft,
+h2 {
+    font-family: "alagard", 'Times New Roman', Times, serif;
+}
+
+.navLeft {
+    line-height: 1;
+}
+
+.display-1 {
+    font-size: 4rem !important;
+}
+
+.scrollbox {
+    scrollbar-color: #fff #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -39,21 +66,24 @@
     }
 
     .display-md-4 {
-        font-size: 3.5rem !important;
+        font-size: min(3.5rem, 45px) !important;
+        overflow-wrap: break-word;
     }
 
     .col-right {
         margin-left: 41.66666667%;
-    }
-
-    .display-1 {
-        font-size: 7rem !important;
+        border-left: 1px solid #fff;
+        box-sizing: border-box;
     }
 }
 
 @media screen and (min-width: 1400px) {
     .col-right {
         margin-left: 25%;
+    }
+
+    .display-1 {
+        font-size: 6rem !important;
     }
 }
 
@@ -72,37 +102,8 @@
         height: calc(100% - 3.5rem);
     }
 }
-
-/* fancy fade-in animation for fun */
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-.fade-2 {
-    opacity: 0;
-    animation-delay: 2s;
-}
-
-.fade-3 {
-    opacity: 0;
-    animation-delay: 4s;
-}
-
-.fade-4 {
-    opacity: 0;
-    animation-delay: 6s;
+div.hello-img {
+    width: min(100%, 40rem) !important;
 }
 
 /* spacing */
@@ -111,6 +112,10 @@
     height: auto;
     margin-left: 3rem;
     margin-right: 3rem;
+}
+
+.carousel-inner {
+    background-color: #fff;
 }
 
 /* colors */
@@ -131,32 +136,36 @@
 }
 
 .code {
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* nav styles (they're ugly) */
 .nav-tabs {
-    border-color: #000;
+    border-color: #fff;
 }
 
 .nav-tabs .nav-link {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-tabs .nav-link.active {
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
     background-color: #000;
+    border-bottom: 1px solid #000;
     color: #fff;
-}
-
-.nav-tabs .nav-link.active {
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
 }
 
 .nav-tabs .nav-link#mac-tab:not(.active):hover {
     border-top: 1px solid #ec635e;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-left: 1px solid #ec635e;
     border-right: 1px solid #ec635e;
     background-color: #ec635e;
@@ -165,7 +174,7 @@
 
 .nav-tabs .nav-link#windows-tab:not(.active):hover {
     border-top: 1px solid #fadf70;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-left: 1px solid #fadf70;
     border-right: 1px solid #fadf70;
     background-color: #fadf70;
@@ -174,7 +183,7 @@
 
 .nav-tabs .nav-link#linux-tab:not(.active):hover {
     border-top: 1px solid #94d769;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-left: 1px solid #94d769;
     border-right: 1px solid #94d769;
     background-color: #94d769;
